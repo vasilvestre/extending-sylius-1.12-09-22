@@ -57,7 +57,7 @@ title: Nouveautés annoncées
 level: 2
 ---
 
-<img src="1.12-release-content.png" width="620" height="501">
+<img src="/1.12-release-content.png" width="620" height="501">
 
 ---
 layout: center
@@ -95,7 +95,7 @@ level: 2
 
 # Tendance
 
-<img src="marketplace_stats.png" height="381" width="600">
+<img src="/marketplace_stats.png" height="381" width="600">
 
 ---
 layout: center
