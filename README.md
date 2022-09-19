@@ -1,4 +1,4 @@
-# Welcome to [Slidev](https://github.com/slidevjs/slidev)!
+# Welcome to my presentation : Extending Sylius API & admin at 1.12
 
 To start the slide show:
 
@@ -6,6 +6,6 @@ To start the slide show:
 - `npm run dev`
 - visit http://localhost:3030
 
-Edit the [slides.md](./slides.md) to see the changes.
+All made and built thank to [Slidev](https://sli.dev/).
 
-Learn more about Slidev on [documentations](https://sli.dev/).
+Code is to be found here : https://github.com/vasilvestre/extending-1.12-support
