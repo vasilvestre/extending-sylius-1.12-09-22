@@ -22,7 +22,6 @@ drawings:
 # use UnoCSS
 css: unocss
 ---
-
 # Étendre Sylius 1.12
 
 Admin, API (Platform)
@@ -35,6 +34,38 @@ Admin, API (Platform)
 The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
 -->
 
+---
+layout: iframe-right
+url: https://github.com/vasilvestre
+class: text-center
+---
+
+# Qui suis-je ?
+Valentin Silvestre, développeur Symfony depuis 2016
+
+Contributeur Sylius, Symfony..
+
+<Tweet id="1510896428905906179" />
+
+<!--
+The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
+-->
+
+---
+layout: center
+class: text-center
+---
+
+# Qui sommes nous ?
+
+<Tweet id="1508357894936408067" />
+
+<!--
+The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
+-->
+
+---
+layout: center
 ---
 
 # De quoi on parle ?
