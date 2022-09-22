@@ -11,6 +11,7 @@ All made and built thank to [Slidev](https://sli.dev/).
 Code is to be found here : https://github.com/vasilvestre/extending-1.12-support
 
 This slideshow covers :
-- [ ] Extending subscription API
+- [x] Extending subscription API
 - [ ] Making profiles public to others
+- [ ] User can create product
 - [ ] Normalization of product

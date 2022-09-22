@@ -32,24 +32,20 @@ hideInToc: true
 ---
 layout: center
 class: text-center
-title: Présentation
-level: 1
-src: ./pages/qui_suis_je.md
+src: ./pages/presentations.md
 ---
 
 ---
-layout: center
-class: text-center
 hideInToc: true
-src: ./pages/qui_sommes_nous.md
+layout: section
 ---
+# API Sylius
 
 ---
-layout: section
-title: Sylius 1.12
-level: 1
+layout: two-cols
+hideInToc: true
+src: ./pages/sylius_and_apip.md
 ---
-# Sylius 1.12
 
 ---
 layout: center
@@ -60,22 +56,16 @@ level: 2
 <img src="/1.12-release-content.png" width="620" height="501">
 
 ---
+layout: section
+title: Sylius 1.12
+level: 1
+---
+# Sylius 1.12
+
+---
 layout: center
 src: ./pages/date_et_contenu.md
 ---
-
----
-hideInToc: true
-layout: section
----
-# API Sylius
-
----
-layout: center
-hideInToc: true
----
-
-// TODO : document how it's working about APIP 2.7 support has been release and support is done
 
 ---
 layout: section
@@ -111,6 +101,66 @@ src: ./pages/sections/exemples.md
 layout: section
 src: ./pages/sections/ajout_siret.md
 ---
+
+---
+hideInToc: true
+---
+
+composer.json
+```json
+"ibericode/vat-bundle": "^2.0",
+```
+
+config/api_platform/customer.yaml
+```yaml
+App\Entity\Customer\Customer:
+    collectionOperations:
+        shop_post:
+            input: App\Command\Account\RegisterShopUser
+```
+
+src/Command/Account/RegisterShopUser.php
+```php
+class RegisterShopUser extends Sylius\Bundle\ApiBundle\Command\Account\RegisterShopUser
+{
+    public function __construct(
+        string $firstName, string $lastName, string $email, string $password,
+        #[Groups('shop:customer:create')] public ?string $vatNumber = null
+    ) {
+        parent::__construct($firstName, $lastName, $email, $password, $subscribedToNewsletter);
+    }
+}
+```
+
+---
+hideInToc: true
+---
+
+src/CommandHandler/Account/RegisterShopUserHandler.php
+```php
+use App\Command\Account\RegisterShopUser;
+use Ibericode\Vat\Exception;
+
+class RegisterShopUserHandler implements MessageHandlerInterface
+{    
+    public function __invoke(RegisterShopUser $command): ShopUserInterface 
+    {
+        // ...
+        if ($command->vatNumber !== null) {
+            if ($this->vatValidator->validateVatNumberFormat($command->vatNumber) === false) {
+                throw new Exception(sprintf('VAT number format "%s" is invalid.', $command->vatNumber));
+            }
+            if ($this->vatValidator->validateVatNumber($command->vatNumber) === false) {
+                throw new Exception(sprintf('VAT number "%s" is invalid.', $command->vatNumber));
+            }
+            $customer->setVatNumber($command->vatNumber);
+        } else {
+            throw new InvalidArgumentException('VAT number is empty.');
+        }
+        // ...
+    }
+}
+```
 
 ---
 layout: section
