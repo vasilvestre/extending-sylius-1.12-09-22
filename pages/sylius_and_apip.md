@@ -3,7 +3,7 @@
 <img src="/qr_blog_5_years.png">
 
 ::right::
-# Right
+# Prévisions
 
 - 03/20 Annonce de la migration vers API platform
 - 02/22 Blog sur la 1.11

@@ -102,12 +102,10 @@ src: ./pages/sections/ajout_siret.md
 ---
 
 ---
-layout: section
 src: ./pages/sections/profil_publique.md
 ---
 
 ---
-layout: section
 src: ./pages/sections/unicite_produit.md
 ---
 

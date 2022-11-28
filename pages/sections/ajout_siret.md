@@ -70,6 +70,16 @@ class RegisterShopUserHandler implements MessageHandlerInterface
 hideInToc: true
 ---
 
+config/services.yaml
+```yaml
+services:
+    _defaults:
+        App\CommandHandler\Account\RegisterShopUserHandler:
+            decorates: 'Sylius\Bundle\ApiBundle\CommandHandler\Account\RegisterShopUserHandler'
+            bind:
+                $tokenGenerator: '@sylius.shop_user.token_generator.email_verification'
+```
+
 Ne pas oublier de renvoyer la donnée dans l'API :)
 
 src/Entity/Customer/Customer.php

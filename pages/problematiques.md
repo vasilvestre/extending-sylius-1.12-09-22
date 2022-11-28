@@ -6,4 +6,4 @@ level: 2
 
 - Client professionnel == SIRET
 - Profil utilisateur publique
-- Tout les produits sont uniques
+- Tout les produits sont uniques (variants)
