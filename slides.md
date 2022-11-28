@@ -160,10 +160,21 @@ level: 2
 
 ---
 hideInToc: true
+layout: center
 ---
 
-- Visiter le profiler partie Request Attributes
+<h3>Visiter le profiler partie Request Attributes</h3>
 
+<img src="/profiler_methodologie.png" width="620" height="501">
+
+---
+hideInToc: true
+layout: center
+---
+
+<h3>Depuis la 6.1</h3>
+
+<img src="/symfony-profiler-serializer.png">
 
 ---
 layout: end

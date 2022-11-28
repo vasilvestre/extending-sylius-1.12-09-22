@@ -5,7 +5,6 @@ layout: section
 ---
 # Ajout et vérification du SIRET
 
-
 ---
 hideInToc: true
 ---
