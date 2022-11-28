@@ -10,10 +10,10 @@ hideInToc: true
 ---
 # Étendre Sylius 1.12
 
-Admin, API (Platform)
+API (Platform)
 
 <div class="abs-br m-6 flex gap-2">
-  <a rel='nofollow' href='https://www.qr-code-generator.com' border='0' style='cursor:default'><img src='https://chart.googleapis.com/chart?cht=qr&chl=https%3A%2F%2Fgithub.com%2Fvasilvestre%2Fextending-sylius-1.12-09-22&chs=180x180&choe=UTF-8&chld=L|2' alt=''></a>
+  <a rel='nofollow' href='https://github.com/vasilvestre/extending-sylius-1.12-09-22' border='0' style='cursor:default'><img src='https://chart.googleapis.com/chart?cht=qr&chl=https%3A%2F%2Fgithub.com%2Fvasilvestre%2Fextending-sylius-1.12-09-22&chs=180x180&choe=UTF-8&chld=L|2' alt=''></a>
 </div>
 
 <!--
@@ -98,69 +98,8 @@ src: ./pages/sections/exemples.md
 ---
 
 ---
-layout: section
 src: ./pages/sections/ajout_siret.md
 ---
-
----
-hideInToc: true
----
-
-composer.json
-```json
-"ibericode/vat-bundle": "^2.0",
-```
-
-config/api_platform/customer.yaml
-```yaml
-App\Entity\Customer\Customer:
-    collectionOperations:
-        shop_post:
-            input: App\Command\Account\RegisterShopUser
-```
-
-src/Command/Account/RegisterShopUser.php
-```php
-class RegisterShopUser extends Sylius\Bundle\ApiBundle\Command\Account\RegisterShopUser
-{
-    public function __construct(
-        string $firstName, string $lastName, string $email, string $password,
-        #[Groups('shop:customer:create')] public ?string $vatNumber = null
-    ) {
-        parent::__construct($firstName, $lastName, $email, $password, $subscribedToNewsletter);
-    }
-}
-```
-
----
-hideInToc: true
----
-
-src/CommandHandler/Account/RegisterShopUserHandler.php
-```php
-use App\Command\Account\RegisterShopUser;
-use Ibericode\Vat\Exception;
-
-class RegisterShopUserHandler implements MessageHandlerInterface
-{    
-    public function __invoke(RegisterShopUser $command): ShopUserInterface 
-    {
-        // ...
-        if ($command->vatNumber !== null) {
-            if ($this->vatValidator->validateVatNumberFormat($command->vatNumber) === false) {
-                throw new Exception(sprintf('VAT number format "%s" is invalid.', $command->vatNumber));
-            }
-            if ($this->vatValidator->validateVatNumber($command->vatNumber) === false) {
-                throw new Exception(sprintf('VAT number "%s" is invalid.', $command->vatNumber));
-            }
-            $customer->setVatNumber($command->vatNumber);
-        } else {
-            throw new InvalidArgumentException('VAT number is empty.');
-        }
-        // ...
-    }
-}
-```
 
 ---
 layout: section
@@ -210,6 +149,21 @@ function updateUser(id: number, update: User) {
   display: none;
 }
 </style>
+
+---
+layout: center
+title: Tendance
+level: 2
+---
+
+# Bonus : méthodologie
+
+---
+hideInToc: true
+---
+
+- Visiter le profiler partie Request Attributes
+
 
 ---
 layout: end
