@@ -12,6 +12,5 @@ Code is to be found here : https://github.com/vasilvestre/extending-1.12-support
 
 This slideshow covers :
 - [x] Extending subscription API
-- [ ] Making profiles public to others
-- [ ] User can create product
-- [ ] Normalization of product
+- [x] Making profiles public to others
+- [x] Normalization of product
