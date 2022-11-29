@@ -36,10 +36,30 @@ src: ./pages/presentations.md
 ---
 
 ---
-hideInToc: true
 layout: section
+title: Sylius 1.12
+level: 1
 ---
-# API Sylius
+# Sylius 1.12
+
+---
+layout: section
+title: Sylius ?
+level: 2
+---
+
+# Sylius ?
+
+---
+layout: center
+hideInToc: true
+---
+
+* Symfony
+* Headless (ou non)
+* Pas ~~(faible)~~ dette technique
+* Customisable
+* Testé
 
 ---
 layout: two-cols
@@ -54,13 +74,6 @@ level: 2
 ---
 
 <img src="/1.12-release-content.png" width="620" height="501">
-
----
-layout: section
-title: Sylius 1.12
-level: 1
----
-# Sylius 1.12
 
 ---
 layout: center
@@ -108,45 +121,6 @@ src: ./pages/sections/profil_publique.md
 ---
 src: ./pages/sections/unicite_produit.md
 ---
-
----
-hideInToc: true
----
-
-# Mettre du code ici
-
-Use code snippets and get the highlighting directly![^1]
-
-```ts {all|2|1-6|9|all}
-interface User {
-  id: number
-  firstName: string
-  lastName: string
-  role: string
-}
-
-function updateUser(id: number, update: User) {
-  const user = getUser(id)
-  const newUser = { ...user, ...update }
-  saveUser(id, newUser)
-}
-```
-
-<arrow v-click="3" x1="400" y1="420" x2="230" y2="330" color="#564" width="3" arrowSize="1" />
-
-[^1]: [Learn More](https://sli.dev/guide/syntax.html#line-highlighting)
-
-<style>
-.footnotes-sep {
-  @apply mt-20 opacity-10;
-}
-.footnotes {
-  @apply text-sm opacity-75;
-}
-.footnote-backref {
-  display: none;
-}
-</style>
 
 ---
 layout: center

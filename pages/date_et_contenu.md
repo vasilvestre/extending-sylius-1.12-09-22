@@ -1,6 +1,7 @@
 ---
 title: Date et contenu
 level: 2
+hideInToc: false
 ---
 
 # Dates
@@ -8,7 +9,7 @@ level: 2
 - v1.12.0-ALPHA.1 - released on 19.09.22
 - v1.12.0-BETA.1 - released on 3.10.22
 - v1.12.0-RC.1 - released on 17.10.22
-- v1.12.0 - released on 27.10.22, which of course is the day of SyliusCon
+- v1.12.0 - released on ~~27~~ 30.10.22 ~~which of course is the day of SyliusCon~~
   <br/>
   <br/>
 
