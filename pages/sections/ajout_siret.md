@@ -36,6 +36,7 @@ class RegisterShopUser extends Sylius\Bundle\ApiBundle\Command\Account\RegisterS
 }
 ```
 
+<!-- Par défaut apip n'est pas censé donner des API ressources et entité déjà faites, sylius a crée ses propres ressources et un moyen de les override -->
 ---
 hideInToc: true
 ---
@@ -90,7 +91,7 @@ use Sylius\Component\Core\Model\Customer as BaseCustomer;
 #[ORM\Table(name: 'sylius_customer')]
 class Customer extends BaseCustomer
 {
-    #[Groups('sylius:customer:read')]
+    #[Groups('shop:customer:read')]
     private $vatNumber;
 }
 ```

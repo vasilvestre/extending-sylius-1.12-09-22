@@ -55,6 +55,7 @@ layout: center
 hideInToc: true
 ---
 
+* Ecommerce
 * Symfony
 * Headless (ou non)
 * Pas ~~(faible)~~ dette technique
@@ -88,8 +89,9 @@ level: 1
 
 # Contexte projet
 
-## Les marketplace
+## Les marketplaces
 
+<!-- + d'explications du contexte et de chaque point -->
 ---
 layout: center
 title: Tendance
@@ -124,12 +126,13 @@ src: ./pages/sections/unicite_produit.md
 
 ---
 layout: center
-title: Tendance
-level: 2
+title: Bonus
+level: 1
 ---
 
 # Bonus : méthodologie
 
+<!-- Normalizer, ItemDataProvider, Handler -->
 ---
 hideInToc: true
 layout: center
