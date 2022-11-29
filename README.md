@@ -1,4 +1,4 @@
-# Welcome to my presentation : Extending Sylius API & admin at 1.12
+# Welcome to my presentation : Extending Sylius API at 1.12
 
 To start the slide show:
 
